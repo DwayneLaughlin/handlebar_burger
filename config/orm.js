@@ -10,8 +10,13 @@ const orm = {
     },
 
     insertOne: function(table, burger_name, devoured){
-        const queryString = "INSERT INTO ??(??, ??);" 
+        const queryString = "INSERT INTO burgers (??, ??):"
+        connection.query(queryString, [burger_name, devoured], function (err, result){
+            if (err) throw err;
+            console.log(result)
+        });
     }
 
 
 };
+module.exports = orm;
