@@ -2,16 +2,16 @@ const connection = require("./connection.js");
 
 const orm = {
     selectAll: function(table){
-        const queryString = "SELECT * FROM burgers;";
-        connection.query(queryString, function(err, result){
+        const queryString = "SELECT * FROM ??;";
+        connection.query(queryString, table, function(err, result){
             if (err) throw err;
-            console.table(result);
+            console.table(queryString);
         });
     },
 
-    insertOne: function(table, burger_name, devoured){
-        const queryString = "INSERT INTO burgers (??, ??):"
-        connection.query(queryString, [burger_name, devoured], function (err, result){
+    insertOne: function(table, col1, col2){
+        const queryString = "INSERT INTO ?? (??, ??):"
+        connection.query(queryString, [table, col1, col2], function (err, result){
             if (err) throw err;
             console.log(result)
         });
