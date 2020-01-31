@@ -11,8 +11,8 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     password: "krgcd8ausuc5d92g",
     database: "qtn9nrlyf2q54vyj"
-});
-};
+    });
+}
 connection.connect(function(err){
     if (err){
         console.error("error" + err.stack)
