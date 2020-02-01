@@ -14,11 +14,11 @@ router.put("/api/burger/:id", function (req,res){
     })
 });
 
-router.post("/burger/cats", function (req,res){
+router.post("/api/burger", function (req,res){
     burger.insertOne(function(data){
 
     })
 });
-
+module.exports = router
 
 
