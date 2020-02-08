@@ -2,21 +2,21 @@ const connection = require("../config/connection.js");
 const orm = require("../config/orm.js");
 
 const burger = {
-  selectAll: function() {
+  selectAll: function(cb) {
     orm.selectAll("burgers", function(res) {
-      console.log(res);
+      cb(res);
     });
   },
 
-    insertOne: function(){
+    insertOne: function(burger){
         orm.insertOne("burgers",function(res){
-            console.log(res)
+            cb(res)
         });
     },
 
-    updateOne: function(){
+    updateOne: function(cb){
         orm.updateOne("burgers", function(res){
-            console.log(res)
+            cb(res)
         });
     }
 };
