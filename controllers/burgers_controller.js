@@ -3,15 +3,9 @@ const burger = require("../models/burger.js");
 const router = express.Router();
 
 router.get("/", function(req,res){
-    burger.selectAll(function(data){
-        // var hbsObject = {
-        //     burgers : data
-        // };
-        
-        // console.log(hbsObject);
-    })
+    burger.selectAll()
+    
     res.render('index')
-    // res.redirect("/burgers")
 });
 
 router.put("/api/burger/:id", function (req,res){

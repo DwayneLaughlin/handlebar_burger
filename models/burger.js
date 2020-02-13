@@ -1,15 +1,14 @@
-const connection = require("../config/connection.js");
 const orm = require("../config/orm.js");
 
 const burger = {
   selectAll: function(cb) {
     orm.selectAll("burgers", function(res) {
-      cb(res);
+     console.log(queryString);
     });
   },
 
     insertOne: function(burger){
-        orm.insertOne("burgers",function(res){
+        orm.insertOne("burgers","","burger_name",function(res){
             cb(res)
         });
     },

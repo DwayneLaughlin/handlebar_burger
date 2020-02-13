@@ -1,6 +1,5 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
-var bodyParser = require("body-parser");
 var app = express();
 var routes = require("./controllers/burgers_controller.js");
 
@@ -17,6 +16,8 @@ app.set("view engine", "handlebars");
 
 
 app.use(routes);
+
+
 
 app.listen(PORT, function() {
   // Log (server-side) when our server has started
